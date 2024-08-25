@@ -11,9 +11,13 @@ function App() {
   const [readingTime, setReadingTime] = useState([])
   
 
-  const handelMarkRead =reading=>{
+  const handelMarkRead =(reading,id)=>{
   const newReadingTiem = readingTime + reading;
   setReadingTime( newReadingTiem)
+
+  // console.log('remove the book Mark', id)
+  const remainingBookMark = bookMarks.filter(bookMark=>bookMark.id !== id)
+  setBookMarks(remainingBookMark)
   }
 
   const handelBookMark =  (blog)=>{

@@ -2,7 +2,7 @@
 import { MdBookmarkAdd } from "react-icons/md";
 
 const Blog = ({blog, handelBookMark, handelMarkRead}) => {
-    const {cover,author_img,author,posted_date,reading_time, title, hashtags}=blog;
+    const {id,cover,author_img,author,posted_date,reading_time, title, hashtags}=blog;
     
     return (
         <div className="mt-10">
@@ -31,7 +31,7 @@ const Blog = ({blog, handelBookMark, handelMarkRead}) => {
             }
            </div>
 
-           <button onClick={()=>handelMarkRead(reading_time)}>mark as read</button>
+           <button onClick={()=>handelMarkRead(reading_time,id)}>mark as read</button>
 
             
         </div>
